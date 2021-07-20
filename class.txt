@@ -1,0 +1,420 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int y=5;
+	int *yptr=NULL;
+	cout<<yptr;
+	yptr=&y;
+	cout<<yptr<<endl;
+	cout<<*yptr<<endl;
+
+	*yptr=9;
+	cout<<*yptr<<endl;
+
+
+	cin>>*yptr;
+	cout<<*yptr<<endl;
+	system("pause");
+	return 0;
+}
+===============================
+
+#include<iostream>
+using namespace std;
+int main(int number)
+{
+	int a=5;
+	const int b=6;
+	int *ptr1;
+	ptr1=&a;
+	const int *ptr2;
+	ptr2=&a;
+	cout<<ptr1<<endl;
+	cout<<*ptr2;
+	
+	system("pause");
+	return 0;
+}
+===========================
+
+#include<iostream>
+#include<string>
+using namespace std;
+void input()
+{
+		int roll_no;
+	int total_marks;
+	int age;
+	string name;
+	char grade;
+	float cgpa;
+
+	
+	cout<<"Enter the (name)  (age) (roll number)  (total marks)  (grade)  (cgpa) :: "<<endl;
+	cin>>name>>age>>roll_no>>total_marks>>grade>>cgpa;
+
+}
+void Display()
+{
+		int roll_no;
+	int total_marks;
+	int age;
+	string name;
+	char grade;
+	float cgpa;
+
+	string *ptr1 = &name;
+	cout<<"The name of the student is :: "<<*ptr1<<endl;
+	cout<<"Address of the Name of student is : "<<ptr1<<endl;
+
+	int *ptr2 = &age;
+	cout<<"the age of student is ::"<<*ptr2<<endl;
+	cout<<"The address of the age of the student is  : "<<ptr2<<endl;
+
+	int *ptr3 = &roll_no;
+	cout<<"The roll number of the student is :: "<<*ptr3<<endl;
+	cout<<"The Address of the roll number of the student is  :: "<<ptr3<<endl;
+
+	int *ptr4 = &total_marks;
+	cout<<"The total marks of the student is :: "<<*ptr4<<endl;
+	cout<<"The address of the total numbers of the student is :: "<<ptr4<<endl;
+
+	char *ptr5 = &grade;
+	cout<<"The grade of the student is :: "<<*ptr5<<endl;
+	cout<<"The address of the grade of the student is :: "<<ptr5<<endl;
+
+	float *ptr6 = &cgpa;
+	cout<<"The cgpa of the student is  :: "<<*ptr6<<endl;
+	cout<<"The address of the cgpa of the student is  :: "<<ptr6<<endl;
+}
+int main()
+{
+	
+	input();
+	Display();
+	system("pause");
+	return 0;
+}
+=========================================================================
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	/*int a;		//data types
+	size_t size=sizeof a;		//size_t   return type   //pointers assignment  //
+	cout<<"size of int :: "<<size<<endl;
+
+	_JUMP_BUFFER
+	string b;
+	size_t size_string=sizeof b;
+	cout<<"size of string :: "<<size_string<<endl;
+	 
+	int array;//[10];
+	size_t size_array=sizeof array;
+	cout<<"size of array :: "<<size_array<<endl;*/
+
+
+/*	int array[10]={0,1,2,3,4,5,6,7,8,9};
+	for(int i=0;i<=9;i++)
+	{
+		cout<<array[i]<<endl;
+	}*/
+
+	/*double a=8.8;
+	int b;
+	b=(int)a;
+	cout<<b<<endl;
+
+	int *ptr=&a;
+	double *ptr=&b;
+	void ptr      */
+/*	cout<<"Hello"<<endl;
+	int a;
+	cout<<a<<endl;
+	*/
+	/*string a;
+cin>>a;
+cin>>setw920>>a;
+cin.getline(a,six)*/
+	int a=5;
+	int *ptr1=&a;
+	void *ptr2=NULL;
+	cout<<ptr1<<endl;
+	cout<<ptr2<<endl;
+	ptr2=ptr1;
+
+
+
+
+
+
+	system("pause");
+	return 0;
+}
+===============================================
+#include<iostream>
+#include<string>
+using namespace std;
+struct student
+{
+	string name;
+	int roll_no;
+};
+int main()
+{
+	int counter=1;
+	student s1;
+	s1.name="ibrar";
+
+	s1.roll_no=0104;
+	cout<<s1.name<<endl;
+
+	cout<<s1.roll_no<<endl;
+
+
+	student s2;
+	s2.name="ibrar";
+	if(s2.name==s1.name)
+	{
+		counter++;
+	}
+	cout<<counter<<endl;
+	cout<<s2.name<<endl;
+
+	system("pause");
+	return 0;
+}
+
+==================================================
+
+LAB
+#include<iostream>
+using namespace std;
+void print(int x=0)   //recusrsion  (function call two times)
+{
+	cout<<"Hello"<<endl;
+	x++;
+	if(x!=5);
+	{
+		print(x+1);
+	}
+}
+int main()
+{
+	int a;
+	int* p=&a;
+	print(*p);
+
+	system("pause");
+	return 0;
+}
+===========================================
+#include<iostream>
+using namespace std;
+int fact(int n)
+{
+ if (n <  1)
+	 {                               // base case
+		return 1;
+	}
+	else
+	{
+		return n*fact(n-1);
+	 }
+}
+int main()
+{
+	int x;
+	cout<<"Enter a number"<<endl;
+	cin>>x;
+	cout<<"The factorail of the number is = "<<fact(x)<<endl;
+
+	system("pause");
+	return 0;
+}
+=======================================
+
+#include<iostream>			NOT WORKING
+using namespace std;
+void square(int a, int b, int c)
+{
+	int x=a*a;
+	if(a!=b)
+	{
+		cout<<" * "<<endl;
+		c++;
+		b++;
+		square(a,b,c);
+		if(b==a)
+		{
+			cout<<endl;
+			if(c!=x)
+			{
+				b=0;
+				square(a,b,c);
+			}
+		}
+	}
+}
+int main()
+{
+	cout<<"Enter a number for print squares "<<endl;
+	int a,b=0,c=0;
+	cin>>a;
+	square(b,a,c);
+	system("pause");
+	return 0;
+}
+==========================================
+#include<iostream>
+#include<string>
+using namespace std;
+struct student
+{
+	string name;
+};
+void input(student &S1)
+{
+	cout<<"ENter the name of the student " ;
+	cin>>S1.name;
+}
+void output(student &S1)
+{
+	cout<<"The name of the student is : "<<S1.name<<endl;
+}
+int main()
+{
+
+	string name;
+	student S1;
+	input(S1);
+	output(S1);
+
+	system("pause");
+	return 0;
+}
+=====================================================
+#include<iostream>
+#include<string>
+using namespace std;
+struct student
+{
+	string name;
+	int roll;
+};
+int main()
+{
+	student p[2];
+	for(int i=0;i<2;i++)
+	{
+		cout<<"Enter the name of the student  : ";
+		cin>>p[i].name;
+		cout<<"Enter roll : ";
+		cin>>p[i].roll;
+	}
+	
+	for(int i=0;i<2;i++)
+	{
+		cout<<"Name : "<<p[i].name<<endl;
+		cout<<"roll no : "<<p[i].roll<<endl;
+	}
+
+	system("pause");
+	return 0;
+}
+=======================================
+#include<iostream>
+#include<string>
+using namespace std;
+struct student
+{
+	string name;
+	int roll;
+};
+int main()
+{
+	student p;
+	student* ptr = &p;
+
+		cout<<"Enter the name of the student  : ";
+		cin>>ptr->name;
+		cout<<"Enter roll : ";
+		cin>>ptr->roll;
+	
+		cout<<"Name : "<<ptr->name<<endl;
+		cout<<"roll no : "<<ptr->roll<<endl;
+
+		
+
+	system("pause");
+	return 0;
+}
+==========================================
+ #include<iostream>
+#include<string>
+using namespace std;
+
+       struct Address
+       {
+              char HouseNo[25];
+              char City[25];
+              char PinCode[25];
+       };
+
+       struct Employee
+       {
+           int Id;
+           char Name[25];
+           float Salary;
+           struct Address Add;
+       };
+
+       void main()
+       {
+              int i;
+              Employee E;
+
+              cout << "\n\tEnter Employee Id : ";
+              cin >> E.Id;
+
+              cout << "\n\tEnter Employee Name : ";
+              cin >> E.Name;
+
+              cout << "\n\tEnter Employee Salary : ";
+              cin >> E.Salary;
+
+              cout << "\n\tEnter Employee House No : ";
+              cin >> E.Add.HouseNo;
+
+              cout << "\n\tEnter Employee City : ";
+              cin >> E.Add.City;
+
+              cout << "\n\tEnter Employee House No : ";
+              cin >> E.Add.PinCode;
+
+              cout << "\nDetails of Employees";
+              cout << "\n\tEmployee Id : " << E.Id;
+              cout << "\n\tEmployee Name : " << E.Name;
+              cout << "\n\tEmployee Salary : " << E.Salary;
+              cout << "\n\tEmployee House No : " << E.Add.HouseNo;
+              cout << "\n\tEmployee City : " << E.Add.City;
+              cout << "\n\tEmployee House No : " << E.Add.PinCode;
+			  system("pause");
+			 // return 0;
+       }
+=============================================================
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+  // Determining the space in bytes occupied by each data type.  
+  std::cout << "Size of integer data type : " <<sizeof(int)<< std::endl;      // 4
+  std::cout << "Size of float data type : " <<sizeof(float)<< std::endl;     //  4
+  std::cout << "Size of double data type : " <<sizeof(double)<< std::endl;    // 8
+  std::cout << "Size of char data type : " <<sizeof(char)<< std::endl;      // 1
+  system("pause");
+  return 0;  
+}
+====================================================
