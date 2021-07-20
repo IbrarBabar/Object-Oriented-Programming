@@ -1,0 +1,9 @@
+PlainEgg 10 0.1 10mints 1.45 A,B,C
+BaconandEgg 22 0.2 20 2.45 E,F,G
+Muffin 23 0.3 30mints 0.99 H,I,J
+Frenchtoast 22 0.2 20 2.45 E,F,G
+PlainEgg 10 0.1 10mints 1.45 A,B,C
+BaconandEgg 22 0.2 20 2.45 E,F,G
+PlainEgg 10 0.1 10mints 1.45 A,B,C
+BaconandEgg 22 0.2 20 2.45 E,F,G
+PlainEgg 10 0.1 10mints 1.45 A,B,C
