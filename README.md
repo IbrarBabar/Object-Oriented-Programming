@@ -4,4 +4,6 @@
      * Source Codes<br>
      * Lectures Slides(.pptx)<br><br> 
      
-# OOP Lab Folder contain Assignments and Lab Task Solutions.
+# OOP Lab Folder contain <br>
+    * Assignments 
+    * Lab Task Solutions.
